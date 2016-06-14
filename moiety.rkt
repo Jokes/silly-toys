@@ -18,7 +18,7 @@
 
 (struct Moiety (name primary hex1 secondary hex2 spoiler) #:transparent)
 (define (moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f])
-  (Moiety name primary (string-upcase hex1) secondary (string-upcase hex2) spoiler))
+  (Moiety name primary (string-upcase hex1) secondary (string-upcase (if secondary hex2 hex1)) spoiler))
 
 (define moiety-list
   (list
@@ -56,32 +56,45 @@
    (moiety "Jarnvidr" "Tyrian" "#4F012E")))
 
 (define (hue-from rgb)
-  (let* ([rgbytes (hex->bytes (substring rgb 1))]
-         [r (/ (first rgbytes) 255)] [g (/ (second rgbytes) 255)] [b (/ (third rgbytes) 255)]
-         [maxrgb (max r g b)] [minrgb (min r g b)]
-         [hue (if (zero? (- maxrgb minrgb))
-                  365
-                  (* 60
-                     (cond
-                       [(equal? r maxrgb) (/ (- g b) (- maxrgb minrgb))]
-                       [(equal? g maxrgb) (+ 2 (/ (- b r) (- maxrgb minrgb)))]
-                       [else              (+ 4 (/ (- r g) (- maxrgb minrgb)))]) 
-                     ))])
-    (if (< hue 0) (+ 360 hue) hue)))
+  (if (equal? rgb "")
+      0
+      (let* ([rgbytes (hex->bytes (substring rgb 1))]
+             [r (/ (first rgbytes) 255)] [g (/ (second rgbytes) 255)] [b (/ (third rgbytes) 255)]
+             [maxrgb (max r g b)] [minrgb (min r g b)]
+             [hue (if (zero? (- maxrgb minrgb))
+                      365
+                      (* 60
+                         (cond
+                           [(equal? r maxrgb) (/ (- g b) (- maxrgb minrgb))]
+                           [(equal? g maxrgb) (+ 2 (/ (- b r) (- maxrgb minrgb)))]
+                           [else              (+ 4 (/ (- r g) (- maxrgb minrgb)))]) 
+                         ))])
+        (if (< hue 0) (+ 360 hue) hue))))
 
 (define (lum-from rgb)
-  (let* ([rgbytes (hex->bytes (substring rgb 1))]
-         [r (/ (first rgbytes) 255)] [g (/ (second rgbytes) 255)] [b (/ (third rgbytes) 255)]
-         [maxrgb (max r g b)] [minrgb (min r g b)])
-    (* 100 (/ (+ maxrgb minrgb) 2))))
+  (if (equal? rgb "")
+      0
+      (let* ([rgbytes (hex->bytes (substring rgb 1))]
+             [r (/ (first rgbytes) 255)] [g (/ (second rgbytes) 255)] [b (/ (third rgbytes) 255)]
+             [maxrgb (max r g b)] [minrgb (min r g b)])
+        (* 100 (/ (+ maxrgb minrgb) 2)))))
 
-(define moiety-rainbow
-  (sort moiety-list
+(define (rainbow-sort mlist)
+  (sort mlist
         (λ (m1 m2)
           (let ([hue1 (hue-from (Moiety-hex1 m1))] [hue2 (hue-from (Moiety-hex1 m2))])
             (if (equal? hue1 hue2)
-                (< (lum-from (Moiety-hex1 m1)) (lum-from (Moiety-hex1 m2)))
+                (let ([lum1 (lum-from (Moiety-hex1 m1))] [lum2 (lum-from (Moiety-hex1 m2))])
+                  (if (equal? lum1 lum2)
+                      (let ([hueB1 (hue-from (Moiety-hex2 m1))] [hueB2 (hue-from (Moiety-hex2 m2))])
+                        (if (equal? hueB1 hueB2)
+                            (< (lum-from (Moiety-hex2 m1)) (lum-from (Moiety-hex2 m2)))
+                            (< hueB1 hueB2)))
+                      (< lum1 lum2)))
                 (< hue1 hue2))))))
+
+(define moiety-rainbow
+  (rainbow-sort moiety-list))
 
 (define (print-moiety-list [ml moiety-list])
   (for-each (λ (m) (print-moiety (Moiety-name m) (Moiety-primary m) (Moiety-hex1 m) 
