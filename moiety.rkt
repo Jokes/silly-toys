@@ -3,16 +3,18 @@
 (require "bytes.rkt")
 
 (define (print-moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f])
-  (let 
-      ([mainline 
-        (if secondary
-            (string-append
-             "[color=" hex1 "]██[/color][color=" hex2 "]█[/color] "
-             "[color=" hex1 "]" name ": [b]" primary "[/b], " hex1 "[/color] "
-             "[size=85][color=" hex2 "]([b]" secondary "[/b], " hex2 ")[/color][/size]")
-            (string-append
-             "[color=" hex1 "]███ " name ": [b]" primary "[/b], " hex1 "[/color]"))])
-    (displayln (if spoiler (string-append "[spoiler]" mainline "[/spoiler]") mainline))))
+  (displayln 
+   (if secondary
+       (string-append
+        "[color=" hex1 "]██[/color][color=" hex2 "]█[/color] " 
+        (s-open spoiler) "[color=" hex1 "]" name ": [b]" primary "[/b], " hex1 "[/color] "
+        "[size=85][color=" hex2 "]([b]" secondary "[/b], " hex2 ")[/color][/size]" (s-close spoiler))
+       (string-append
+        "[color=" hex1 "]███[/color] " 
+        (s-open spoiler) "[color=" hex1 "]"name ": [b]" primary "[/b], " hex1 "[/color]" (s-close spoiler)))))
+
+(define (s-open spoiler) (if spoiler "[spoiler]" ""))
+(define (s-close spoiler) (if spoiler "[/spoiler]" ""))
 
 (struct Moiety (name primary hex1 secondary hex2 spoiler) #:transparent)
 (define (moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f])
