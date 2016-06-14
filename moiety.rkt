@@ -16,7 +16,7 @@
 
 (struct Moiety (name primary hex1 secondary hex2 spoiler) #:transparent)
 (define (moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f])
-  (Moiety name primary hex1 secondary hex2 spoiler))
+  (Moiety name primary (string-upcase hex1) secondary (string-upcase hex2) spoiler))
 
 (define moiety-list
   (list
@@ -29,14 +29,14 @@
    (moiety "PlainDealingVillain" "Tan" "#BF8040")
    (moiety "AndaisQ" "Pink" "#FF4080")
    (moiety "Anya" "Lavender" "#C080FF")
-   (moiety "Lambda" "Teal" "#008080" "Brass" "#b5a642")
+   (moiety "Lambda" "Teal" "#008080" "Brass" "#B5A642")
    (moiety "Kel" "Cyan" "#00CFCF")
    (moiety "Adelene" "Brown" "#62371F")
    (moiety "CuriousDiscoverer" "Silver" "#A0A0A0")
    (moiety "Nemo" "Gold" "#FFBF00")
    (moiety "Link" "Violet" "#7F00FF")
    (moiety "Kuuskytkolme" "Lime" "#99C534")
-   (moiety "ErinFlight" "Copper" "#d5732a")
+   (moiety "ErinFlight" "Copper" "#D5732A")
    (moiety "MaggieoftheOwls" "White" "#FFFFFF" #f "" #t)
    (moiety "Rockeye" "Black" "#000000")
    (moiety "Pedro" "Salmon" "#ff5c5c" "Peach" "#FFB25C")
