@@ -61,16 +61,25 @@
                   365
                   (* 60
                      (cond
-                          [(equal? r maxrgb) (/ (- g b) (- maxrgb minrgb))]
-                          [(equal? g maxrgb) (+ 2 (/ (- b r) (- maxrgb minrgb)))]
-                          [else              (+ 4 (/ (- r g) (- maxrgb minrgb)))]) 
-                        ))])
+                       [(equal? r maxrgb) (/ (- g b) (- maxrgb minrgb))]
+                       [(equal? g maxrgb) (+ 2 (/ (- b r) (- maxrgb minrgb)))]
+                       [else              (+ 4 (/ (- r g) (- maxrgb minrgb)))]) 
+                     ))])
     (if (< hue 0) (+ 360 hue) hue)))
+
+(define (lum-from rgb)
+  (let* ([rgbytes (hex->bytes (substring rgb 1))]
+         [r (/ (first rgbytes) 255)] [g (/ (second rgbytes) 255)] [b (/ (third rgbytes) 255)]
+         [maxrgb (max r g b)] [minrgb (min r g b)])
+    (* 100 (/ (+ maxrgb minrgb) 2))))
 
 (define moiety-rainbow
   (sort moiety-list
         (λ (m1 m2)
-          (< (hue-from (Moiety-hex1 m1)) (hue-from (Moiety-hex1 m2))))))
+          (let ([hue1 (hue-from (Moiety-hex1 m1))] [hue2 (hue-from (Moiety-hex1 m2))])
+            (if (equal? hue1 hue2)
+                (< (lum-from (Moiety-hex1 m1)) (lum-from (Moiety-hex1 m2)))
+                (< hue1 hue2))))))
 
 (define (print-moiety-list [ml moiety-list])
   (for-each (λ (m) (print-moiety (Moiety-name m) (Moiety-primary m) (Moiety-hex1 m) 
