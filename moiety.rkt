@@ -49,7 +49,7 @@
    (moiety "RoboticLIN" "Venom" "#728C00")
    (moiety "Diaeresis" "Moss" "#006000")
    (moiety "Moriwen" "Lotus" "#6960EC")
-   (moiety "atheistcanuck" "Plum" "#7D0552")
+   (moiety "atheistcanuck" "Plum" "#7D0552" "Redwood" "#A45A52")
    (moiety "lintamande" "Candy" "#FF0000")
    (moiety "Sine Salvatorem" "Aqua" "#00FFFF" #f "" #t)
    (moiety "DeAnno" "Yellow" "#FFFF00" #f "" #t)
