@@ -24,7 +24,7 @@
   (list
    (moiety "Alicorn" "Green" "#00BF80" "Cerulean" "#007BA7")
    (moiety "Kappa" "Purple" "#8040BF" "Indigo" "#602080")
-   (moiety "Aestrix" "Blue" "#0080FF")
+   (moiety "Aestrix" "Blue" "#0080FF" "Navy" "#1a2196")
    (moiety "Marri" "Red" "#BF4040")
    (moiety "Benedict" "Grey" "#696969")
    (moiety "Anthusiasm" "Orange" "#FF8000")
