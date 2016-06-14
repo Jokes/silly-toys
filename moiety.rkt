@@ -62,7 +62,7 @@
              [r (/ (first rgbytes) 255)] [g (/ (second rgbytes) 255)] [b (/ (third rgbytes) 255)]
              [maxrgb (max r g b)] [minrgb (min r g b)]
              [hue (if (zero? (- maxrgb minrgb))
-                      365
+                      360
                       (* 60
                          (cond
                            [(equal? r maxrgb) (/ (- g b) (- maxrgb minrgb))]
