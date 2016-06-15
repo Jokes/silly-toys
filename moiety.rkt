@@ -33,7 +33,7 @@
    (moiety "Anya" "Lavender" "#C080FF")
    (moiety "Lambda" "Teal" "#008080" "Brass" "#B5A642")
    (moiety "Kel" "Cyan" "#00CFCF")
-   (moiety "Adelene" "Brown" "#62371F")
+   (moiety "Adelene" "Brown" "#62371F" "Stormcloud" "#AAB7BF")
    (moiety "CuriousDiscoverer" "Silver" "#A0A0A0")
    (moiety "Nemo" "Gold" "#FFBF00")
    (moiety "Link" "Violet" "#7F00FF")
