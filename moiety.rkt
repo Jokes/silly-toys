@@ -45,7 +45,7 @@
    (moiety "Eva" "Midnight" "#000080")
    (moiety "Teceler" "Forest" "#228B22")
    (moiety "Throne3d" "Carmine" "#960018" "Palatinate" "#682860")
-   (moiety "Timepoof" "Rose" "#FF91BF")
+   (moiety "Timepoof" "Rose" "#FF91BF" "Chocolate" "#692823")
    (moiety "RoboticLIN" "Venom" "#728C00")
    (moiety "Diaeresis" "Moss" "#006000" "Slate" "#708090")
    (moiety "Moriwen" "Lotus" "#6960EC")
