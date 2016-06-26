@@ -32,7 +32,7 @@
    (moiety "AndaisQ" "Pink" "#FF4080")
    (moiety "Anya" "Lavender" "#C080FF")
    (moiety "Lambda" "Teal" "#008080" "Brass" "#B5A642")
-   (moiety "Kel" "Cyan" "#00CFCF")
+   (moiety "Kel" "Cyan" "#00CFCF" "Azure" "#007FFF")
    (moiety "Adelene" "Brown" "#62371F" "Stormcloud" "#AAB7BF")
    (moiety "CuriousDiscoverer" "Silver" "#A0A0A0")
    (moiety "Nemo" "Gold" "#FFBF00")
