@@ -48,7 +48,7 @@
    (moiety "Timepoof" "Rose" "#FF91BF" "Chocolate" "#692823")
    (moiety "RoboticLIN" "Venom" "#728C00")
    (moiety "Diaeresis" "Moss" "#006000" "Slate" "#708090")
-   (moiety "Moriwen" "Lotus" "#6960EC")
+   (moiety "Moriwen" "Lotus" "#6960EC" "Pomegranate" "#800512")
    (moiety "atheistcanuck" "Plum" "#7D0552" "Redwood" "#A45A52")
    (moiety "lintamande" "Candy" "#FF0000")
    (moiety "Sine Salvatorem" "Aqua" "#00FFFF" #f "" #t)
