@@ -30,7 +30,7 @@
    (moiety "Anthusiasm" "Orange" "#FF8000")
    (moiety "PlainDealingVillain" "Tan" "#BF8040" "Orange" "#FF8000")
    (moiety "AndaisQ" "Pink" "#FF4080")
-   (moiety "Anya" "Lavender" "#C080FF")
+   (moiety "Anya" "Lavender" "#C080FF" "Silver" "#A0A0A0")
    (moiety "Lambda" "Teal" "#008080" "Brass" "#B5A642")
    (moiety "Kel" "Cyan" "#00CFCF" "Azure" "#007FFF")
    (moiety "Adelene" "Brown" "#62371F" "Stormcloud" "#AAB7BF")
