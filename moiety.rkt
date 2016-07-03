@@ -53,7 +53,8 @@
    (moiety "lintamande" "Candy" "#FF0000")
    (moiety "Sine Salvatorem" "Aqua" "#00FFFF" #f "" #t)
    (moiety "DeAnno" "Yellow" "#FFFF00" #f "" #t)
-   (moiety "Jarnvidr" "Tyrian" "#4F012E" "Ultramarine" "#3F00FF")))
+   (moiety "Jarnvidr" "Tyrian" "#4F012E" "Ultramarine" "#3F00FF")
+   (moiety "Unbitwise" "Spruce" "#8DBCB4" "Lead" "#413C40")))
 
 (define (hue-from rgb)
   (if (equal? rgb "")
