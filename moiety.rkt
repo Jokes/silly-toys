@@ -55,7 +55,8 @@
    (moiety "DeAnno" "Yellow" "#FFFF00" #f "" #t)
    (moiety "Jarnvidr" "Tyrian" "#4F012E" "Ultramarine" "#3F00FF")
    (moiety "Unbitwise" "Spruce" "#8DBCB4" "Lead" "#413C40")
-   (moiety "Tricky" "Cream" "#fffdd0" #f "" #t)))
+   (moiety "Tricky" "Cream" "#fffdd0" #f "" #t)
+   (moiety "Shirube" "Mint" "#CCFFCC" "Lilac" "#DCD0FF" #t)))
 
 (define (hue-from rgb)
   (if (equal? rgb "")
