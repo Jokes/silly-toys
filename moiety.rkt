@@ -2,13 +2,17 @@
 
 (require "bytes.rkt")
 
-(define (print-moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f])
+(define (print-moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f] [spoiler_second 0])
+  (if (equal? spoiler_second 0) (set! spoiler_second spoiler) 0)
   (displayln 
    (if secondary
        (string-append
         "[color=" hex1 "]██[/color][color=" hex2 "]█[/color] " 
-        (s-open spoiler) "[color=" hex1 "]" name ": [b]" primary "[/b], " hex1 "[/color] "
-        "[size=85][color=" hex2 "]([b]" secondary "[/b], " hex2 ")[/color][/size]" (s-close spoiler))
+        (s-open spoiler) "[color=" hex1 "]" name ": [b]" primary "[/b], " hex1 "[/color]"
+        (s-close (and spoiler (not spoiler_second)))
+        " "
+        (s-open (and (not spoiler) spoiler_second))
+        "[size=85][color=" hex2 "]([b]" secondary "[/b], " hex2 ")[/color][/size]" (s-close spoiler_second))
        (string-append
         "[color=" hex1 "]███[/color] " 
         (s-open spoiler) "[color=" hex1 "]"name ": [b]" primary "[/b], " hex1 "[/color]" (s-close spoiler)))))
@@ -16,9 +20,9 @@
 (define (s-open spoiler) (if spoiler "[spoiler]" ""))
 (define (s-close spoiler) (if spoiler "[/spoiler]" ""))
 
-(struct Moiety (name primary hex1 secondary hex2 spoiler) #:transparent)
-(define (moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f])
-  (Moiety name primary (string-upcase hex1) secondary (string-upcase (if secondary hex2 hex1)) spoiler))
+(struct Moiety (name primary hex1 secondary hex2 spoiler spoiler_second) #:transparent)
+(define (moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f] [spoiler_second 0])
+  (Moiety name primary (string-upcase hex1) secondary (string-upcase (if secondary hex2 hex1)) spoiler spoiler_second))
 
 (define moiety-list
   (list
@@ -56,7 +60,8 @@
    (moiety "Jarnvidr" "Tyrian" "#4F012E" "Ultramarine" "#3F00FF")
    (moiety "Unbitwise" "Spruce" "#8DBCB4" "Lead" "#413C40")
    (moiety "Tricky" "Cream" "#fffdd0" #f "" #t)
-   (moiety "Shirube" "Mint" "#CCFFCC" "Lilac" "#DCD0FF" #t)))
+   (moiety "Shirube" "Mint" "#CCFFCC" "Lilac" "#DCD0FF" #t)
+))
 
 (define (hue-from rgb)
   (if (equal? rgb "")
@@ -101,5 +106,5 @@
 
 (define (print-moiety-list [ml moiety-list])
   (for-each (λ (m) (print-moiety (Moiety-name m) (Moiety-primary m) (Moiety-hex1 m) 
-                                 (Moiety-secondary m) (Moiety-hex2 m) (Moiety-spoiler m))) 
+                                 (Moiety-secondary m) (Moiety-hex2 m) (Moiety-spoiler m) (Moiety-spoiler_second m)))
             ml))
