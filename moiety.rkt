@@ -3,7 +3,7 @@
 (require "bytes.rkt")
 
 (define (print-moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f] [spoiler_second 0])
-  (if (equal? spoiler_second 0) (set! spoiler_second spoiler) 0)
+  (when (equal? spoiler_second 0) (set! spoiler_second spoiler))
   (displayln 
    (if secondary
        (string-append
@@ -61,6 +61,7 @@
    (moiety "Unbitwise" "Spruce" "#8DBCB4" "Lead" "#413C40")
    (moiety "Tricky" "Cream" "#fffdd0" #f "" #t)
    (moiety "Shirube" "Mint" "#CCFFCC" "Lilac" "#DCD0FF" #t)
+   (moiety "Ezra" "Canary" "#FFEF00" "Black" "#000000" #t #f)
 ))
 
 (define (hue-from rgb)
