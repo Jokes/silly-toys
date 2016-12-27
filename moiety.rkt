@@ -62,6 +62,7 @@
    (moiety "Tricky" "Cream" "#fffdd0" #f "" #t)
    (moiety "Shirube" "Mint" "#CCFFCC" "Lilac" "#DCD0FF" #t)
    (moiety "Ezra" "Canary" "#FFEF00" "Black" "#000000" #t #f)
+   (moiety "Guilty" "Palatinate" "#682860" "Pine" "#01796F")
 ))
 
 (define (hue-from rgb)
