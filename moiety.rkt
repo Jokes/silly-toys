@@ -59,7 +59,7 @@
    (moiety "DeAnno" "Yellow" "#FFFF00" #f "" #t)
    (moiety "Jarnvidr" "Tyrian" "#4F012E" "Ultramarine" "#3F00FF")
    (moiety "Unbitwise" "Spruce" "#8DBCB4" "Lead" "#413C40")
-   (moiety "Tricky" "Cream" "#fffdd0" #f "" #t)
+   (moiety "Tricky" "Tangelo" "#ff4500" "Pomegranate" "#800512")
    (moiety "Shirube" "Mint" "#CCFFCC" "Lilac" "#DCD0FF" #t)
    (moiety "Ezra" "Canary" "#FFEF00" "Black" "#000000" #t #f)
    (moiety "Guilty" "Palatinate" "#682860" "Pine" "#01796F")
