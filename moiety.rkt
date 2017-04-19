@@ -63,7 +63,7 @@
    (moiety "Shirube" "Mint" "#CCFFCC" "Lilac" "#DCD0FF" #t)
    (moiety "Ezra" "Canary" "#FFEF00" "Black" "#000000" #t #f)
    (moiety "Guilty" "Palatinate" "#682860" "Pine" "#01796F")
-   (moiety "Kaylin" "Royal" "#4169E1" "Stormcloud" "#AAB7BF")
+   (moiety "Kaylin" "Royal" "#1800DB" "Stormcloud" "#AAB7BF")
 ))
 
 (define (hue-from rgb)
