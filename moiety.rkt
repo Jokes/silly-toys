@@ -64,6 +64,7 @@
    (moiety "Ezra" "Canary" "#FFEF00" "Black" "#000000" #t #f)
    (moiety "Guilty" "Palatinate" "#682860" "Pine" "#01796F")
    (moiety "Kaylin" "Royal" "#1800DB" "Stormcloud" "#AAB7BF")
+   (moiety "Wizard" "Heather" "#9778BE")
 ))
 
 (define (hue-from rgb)
