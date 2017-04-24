@@ -65,7 +65,7 @@
    (moiety "Guilty" "Palatinate" "#682860" "Pine" "#01796F")
    (moiety "Kaylin" "Royal" "#1800DB" "Stormcloud" "#AAB7BF")
    (moiety "Wizard" "Heather" "#9778BE")
-))
+   ))
 
 (define (hue-from rgb)
   (if (equal? rgb "")
@@ -112,3 +112,70 @@
   (for-each (λ (m) (print-moiety (Moiety-name m) (Moiety-primary m) (Moiety-hex1 m) 
                                  (Moiety-secondary m) (Moiety-hex2 m) (Moiety-spoiler m) (Moiety-spoiler_second m)))
             ml))
+
+(define (combine-duplicates mlist)
+  (remove-duplicates
+   (let ([rmlist (remove-duplicates mlist)])
+     (map (λ (m) 
+            (let ([m-in (count (λ (n) (equal? (Moiety-primary n) (Moiety-primary m))) rmlist)])
+              (if (> m-in 1)
+                  (moiety "(primary and secondary)" (Moiety-primary m) (Moiety-hex1 m) #f "" (Moiety-spoiler m))
+                  m)))
+          rmlist))))
+
+(define all-colours
+  (rainbow-sort 
+   (combine-duplicates
+    (apply append
+           (map
+            (λ (m)
+              (let ([primary-marker "(primary)"] [secondary-marker "(secondary)"])
+                (list
+                 (moiety primary-marker (Moiety-primary m) (Moiety-hex1 m) #f "" (Moiety-spoiler m)) 
+                 (if (Moiety-secondary m)
+                     (moiety secondary-marker (Moiety-secondary m) (Moiety-hex2 m) #f "" 
+                             (if (equal? (Moiety-spoiler_second m) 0)
+                                 (Moiety-spoiler m)
+                                 (Moiety-spoiler_second m)))
+                     (moiety primary-marker (Moiety-primary m) (Moiety-hex1 m) #f "" (Moiety-spoiler m))))))
+            moiety-list)))))
+
+(define unused-colours
+  (let ([unused-marker "[i](unused)[/i]"])
+    (rainbow-sort
+     (list
+      (moiety unused-marker "Eggplant" "#3F2B66")
+      (moiety unused-marker "Nightshade" "#7930B5")
+      (moiety unused-marker "Amethyst" "#993BD1")
+      (moiety unused-marker "Fog" "#A794B2")
+      (moiety unused-marker "Eminence" "#6C3082")
+      (moiety unused-marker "Wisteria" "#724D79")
+      (moiety unused-marker "Blackberry" "#4C2A4F")
+      (moiety unused-marker "Byzantium" "#702963")
+      (moiety unused-marker "Thistle" "#8F7C8B")
+      (moiety unused-marker "Mulberry" "#6E235D")
+      (moiety unused-marker "Pansy" "#78184A")
+      (moiety unused-marker "Coral" "#CC6F6F")
+      (moiety unused-marker "Smoke" "#693834")
+      (moiety unused-marker "Haze" "#704C49")
+      (moiety unused-marker "Cinnabar" "#E34234")
+      (moiety unused-marker "Cinnamon" "#C15A39")
+      (moiety unused-marker "Mist" "#D4A697")
+      (moiety unused-marker "Driftwood" "#766259")
+      (moiety unused-marker "Coal" "#372E29")
+      (moiety unused-marker "Shale" "#564D48")
+      (moiety unused-marker "Morning" "#E17A40")
+      (moiety unused-marker "Toffee" "#ECB939")
+      (moiety unused-marker "Damask" "#9C4975")
+      (moiety unused-marker "Cream" "#fffdd0" #f "" #t)
+      (moiety unused-marker "Periwinkle" "#9F9FFF")
+      (moiety unused-marker "Mallow" "#D191FF")
+      (moiety unused-marker "Petal" "#C38EE6")
+      (moiety unused-marker "Mauve" "#E0B0FF" #f "" #t)
+      (moiety unused-marker "Sky" "#B5D4FF" #f "" #t)
+      (moiety unused-marker "Powder" "#91BFFF")
+      (moiety unused-marker "Seafoam" "#8EDAB2")
+      (moiety unused-marker "Sunlight" "#FFF88D" #f "" #t)))))
+
+(define every-colour
+  (rainbow-sort (append all-colours unused-colours)))
