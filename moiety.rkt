@@ -1,6 +1,9 @@
 #lang racket
 
 (require "bytes.rkt")
+(provide Moiety Moiety->string
+         moiety-rainbow all-colours unused-colours every-colour 
+         hue-from lum-from)
 
 (define (print-moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f] [spoiler_second 0])
   (when (equal? spoiler_second 0) (set! spoiler_second spoiler))
@@ -23,6 +26,13 @@
 (struct Moiety (name primary hex1 secondary hex2 spoiler spoiler_second) #:transparent)
 (define (moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f] [spoiler_second 0])
   (Moiety name primary (string-upcase hex1) secondary (string-upcase (if secondary hex2 hex1)) spoiler spoiler_second))
+
+(define (Moiety->string m)
+  (string-append
+   (Moiety-name m) ": " (Moiety-primary m) " (" (Moiety-hex1 m) ")"
+   (if (Moiety-secondary m)
+     (string-append ", " (Moiety-secondary m) " (" (Moiety-hex2 m) ")")
+     "")))
 
 (define moiety-list
   (list
@@ -65,6 +75,7 @@
    (moiety "Guilty" "Palatinate" "#682860" "Pine" "#01796F")
    (moiety "Kaylin" "Royal" "#1800DB" "Stormcloud" "#AAB7BF")
    (moiety "Wizard" "Heather" "#9778BE")
+   (moiety "Transreal Clouden" "Sky" "#B5D4FF" #f "" #t)
    ))
 
 (define (hue-from rgb)
@@ -158,7 +169,6 @@
       (moiety unused-marker "Sunlight" "#FFF88D" #f "" #t)
       (moiety unused-marker "Cream" "#fffdd0" #f "" #t)
       (moiety unused-marker "Seafoam" "#8EDAB2")
-      (moiety unused-marker "Sky" "#B5D4FF" #f "" #t)
       (moiety unused-marker "Powder" "#91BFFF")
       (moiety unused-marker "Periwinkle" "#9F9FFF")
       (moiety unused-marker "Eggplant" "#3F2B66")
@@ -175,7 +185,40 @@
       (moiety unused-marker "Thistle" "#8F7C8B")
       (moiety unused-marker "Mulberry" "#6E235D")
       (moiety unused-marker "Damask" "#9C4975")
-      (moiety unused-marker "Pansy" "#78184A")))))
+      (moiety unused-marker "Pansy" "#78184A")
+      (moiety unused-marker "Platinum" "#C8BECE")
+      (moiety unused-marker "Gloom" "#545365")
+      (moiety unused-marker "Flint" "#636268")
+      (moiety unused-marker "Ashes" "#4B4946")
+      (moiety unused-marker "Shadow" "#292B38")
+      (moiety unused-marker "Iris" "#525195")
+      (moiety unused-marker "Storm" "#757ADB")
+      (moiety unused-marker "Twilight" "#484AA1")
+      (moiety unused-marker "Steel" "#556979")
+      (moiety unused-marker "Thunder" "#444F69")
+      (moiety unused-marker "Denim" "#2F4557")
+      (moiety unused-marker "Jade" "#61AB89")
+      (moiety unused-marker "Spearmint" "#148E67")
+      (moiety unused-marker "Emerald" "#20603F")
+      (moiety unused-marker "Honeydew" "#D1E572" #f "" #t)
+      (moiety unused-marker "Algae" "#97AF8B")
+      (moiety unused-marker "Murk" "#4B4420")
+      (moiety unused-marker "Amber" "#C18E1B")
+      (moiety unused-marker "Ivory" "#FFD297" #f "" #t)
+      (moiety unused-marker "Buttercup" "#F6BF6C")
+      (moiety unused-marker "Marigold" "#FFB53C")
+      (moiety unused-marker "Cantaloupe" "#FF984F")
+      (moiety unused-marker "Terracotta" "#B24407")
+      (moiety unused-marker "Caramel" "#C47149")
+      (moiety unused-marker "Stone" "#827A64")
+      (moiety unused-marker "Garnet" "#581014")
+      (moiety unused-marker "Watermelon" "#DB518D")
+      (moiety unused-marker "Clay" "#603E3D")
+      (moiety unused-marker "Sable" "#57372C")
+      (moiety unused-marker "Hickory" "#72573A")
+      (moiety unused-marker "Soil" "#5A4534")
+      (moiety unused-marker "Raspberry" "#8A024A")
+      (moiety unused-marker "Brick" "#9A534D")))))
 
 (define every-colour
   (rainbow-sort (append all-colours unused-colours)))
