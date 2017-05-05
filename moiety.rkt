@@ -76,6 +76,7 @@
    (moiety "Kaylin" "Royal" "#1800DB" "Stormcloud" "#AAB7BF")
    (moiety "Wizard" "Heather" "#9778BE")
    (moiety "Transreal Clouden" "Sky" "#B5D4FF" #f "" #t)
+   (moiety "Tulip" "Twilight" "#484AA1" "Cinnabar" "#E34234")
    ))
 
 (define (hue-from rgb)
@@ -158,7 +159,6 @@
       (moiety unused-marker "Coral" "#CC6F6F")
       (moiety unused-marker "Smoke" "#693834")
       (moiety unused-marker "Haze" "#704C49")
-      (moiety unused-marker "Cinnabar" "#E34234")
       (moiety unused-marker "Cinnamon" "#C15A39")
       (moiety unused-marker "Mist" "#D4A697")
       (moiety unused-marker "Driftwood" "#766259")
@@ -193,7 +193,6 @@
       (moiety unused-marker "Shadow" "#292B38")
       (moiety unused-marker "Iris" "#525195")
       (moiety unused-marker "Storm" "#757ADB")
-      (moiety unused-marker "Twilight" "#484AA1")
       (moiety unused-marker "Steel" "#556979")
       (moiety unused-marker "Thunder" "#444F69")
       (moiety unused-marker "Denim" "#2F4557")
