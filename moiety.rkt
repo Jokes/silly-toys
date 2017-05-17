@@ -1,7 +1,8 @@
 #lang racket
 
 (require "bytes.rkt")
-(provide Moiety Moiety->string
+(provide Moiety Moiety->string moiety
+         Moiety-name Moiety-primary Moiety-hex1 Moiety-secondary Moiety-hex2
          moiety-rainbow all-colours unused-colours every-colour 
          hue-from lum-from)
 
@@ -77,6 +78,7 @@
    (moiety "Wizard" "Heather" "#9778BE")
    (moiety "Transreal Clouden" "Sky" "#B5D4FF" #f "" #t)
    (moiety "Tulip" "Twilight" "#484AA1" "Cinnabar" "#E34234")
+   (moiety "ChaosMagic" "Fuchsia" "#C74375" "Gloom" "#545365")
    ))
 
 (define (hue-from rgb)
@@ -187,7 +189,6 @@
       (moiety unused-marker "Damask" "#9C4975")
       (moiety unused-marker "Pansy" "#78184A")
       (moiety unused-marker "Platinum" "#C8BECE")
-      (moiety unused-marker "Gloom" "#545365")
       (moiety unused-marker "Flint" "#636268")
       (moiety unused-marker "Ashes" "#4B4946")
       (moiety unused-marker "Shadow" "#292B38")
