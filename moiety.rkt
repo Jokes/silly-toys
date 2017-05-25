@@ -79,6 +79,7 @@
    (moiety "Transreal Clouden" "Sky" "#B5D4FF" #f "" #t)
    (moiety "Tulip" "Twilight" "#484AA1" "Cinnabar" "#E34234")
    (moiety "ChaosMagic" "Fuchsia" "#C74375" "Gloom" "#545365")
+   (moiety "Rotifer" "Carbon" "#564D48" "Morning" "#E17A40")
    ))
 
 (define (hue-from rgb)
@@ -165,8 +166,6 @@
       (moiety unused-marker "Mist" "#D4A697")
       (moiety unused-marker "Driftwood" "#766259")
       (moiety unused-marker "Coal" "#372E29")
-      (moiety unused-marker "Shale" "#564D48")
-      (moiety unused-marker "Morning" "#E17A40")
       (moiety unused-marker "Toffee" "#ECB939")
       (moiety unused-marker "Sunlight" "#FFF88D" #f "" #t)
       (moiety unused-marker "Cream" "#fffdd0" #f "" #t)
