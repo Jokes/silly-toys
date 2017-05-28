@@ -32,8 +32,8 @@
   (string-append
    (Moiety-name m) ": " (Moiety-primary m) " (" (Moiety-hex1 m) ")"
    (if (Moiety-secondary m)
-     (string-append ", " (Moiety-secondary m) " (" (Moiety-hex2 m) ")")
-     "")))
+       (string-append ", " (Moiety-secondary m) " (" (Moiety-hex2 m) ")")
+       "")))
 
 (define moiety-list
   (list
@@ -45,7 +45,7 @@
    (moiety "Anthusiasm" "Orange" "#FF8000")
    (moiety "PlainDealingVillain" "Tan" "#BF8040" "Orange" "#FF8000")
    (moiety "AndaisQ" "Pink" "#FF4080")
-   (moiety "Anya" "Lavender" "#C080FF" "Silver" "#A0A0A0")
+   (moiety "Anya" "Storm" "#757ADB" "Silver" "#A0A0A0")
    (moiety "Lambda" "Teal" "#008080" "Brass" "#B5A642")
    (moiety "Kel" "Cyan" "#00CFCF" "Azure" "#007FFF")
    (moiety "Adelene" "Brown" "#62371F" "Stormcloud" "#AAB7BF")
@@ -80,6 +80,7 @@
    (moiety "Tulip" "Twilight" "#484AA1" "Cinnabar" "#E34234")
    (moiety "ChaosMagic" "Fuchsia" "#C74375" "Gloom" "#545365")
    (moiety "Rotifer" "Carbon" "#564D48" "Morning" "#E17A40")
+   (moiety "TeenyTabris" "Wisteria" "#724D79")
    ))
 
 (define (hue-from rgb)
@@ -180,7 +181,6 @@
       (moiety unused-marker "Amethyst" "#993BD1")
       (moiety unused-marker "Fog" "#A794B2")
       (moiety unused-marker "Eminence" "#6C3082")
-      (moiety unused-marker "Wisteria" "#724D79")
       (moiety unused-marker "Blackberry" "#4C2A4F")
       (moiety unused-marker "Byzantium" "#702963")
       (moiety unused-marker "Thistle" "#8F7C8B")
@@ -192,7 +192,7 @@
       (moiety unused-marker "Ashes" "#4B4946")
       (moiety unused-marker "Shadow" "#292B38")
       (moiety unused-marker "Iris" "#525195")
-      (moiety unused-marker "Storm" "#757ADB")
+      (moiety unused-marker "Lavender" "#C080FF")
       (moiety unused-marker "Steel" "#556979")
       (moiety unused-marker "Thunder" "#444F69")
       (moiety unused-marker "Denim" "#2F4557")
@@ -221,3 +221,17 @@
 
 (define every-colour
   (rainbow-sort (append all-colours unused-colours)))
+
+(define (replace-list-post)
+  (displayln "List of colours currently in use:")
+  (displayln "[spoiler-box=Colours in use]")
+  (print-moiety-list all-colours)
+  (displayln "[/spoiler-box]")
+  (displayln "List of unused colours that have been unofficially named - you are free to use these names for different colours, or these colours under different names:")
+  (displayln "[spoiler-box=Unused colours]")
+  (print-moiety-list unused-colours)
+  (displayln "[/spoiler-box]")    
+  (displayln "Mixed list:")
+  (displayln "[spoiler-box=All the colours]")
+  (print-moiety-list every-colour)
+  (displayln "[/spoiler-box]"))
