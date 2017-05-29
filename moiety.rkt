@@ -81,6 +81,7 @@
    (moiety "ChaosMagic" "Fuchsia" "#C74375" "Gloom" "#545365")
    (moiety "Rotifer" "Carbon" "#564D48" "Morning" "#E17A40")
    (moiety "TeenyTabris" "Wisteria" "#724D79")
+   (moiety "Armada" "Emerald" "#20603F" "Spruce" "#8DBCB4")
    ))
 
 (define (hue-from rgb)
@@ -198,7 +199,6 @@
       (moiety unused-marker "Denim" "#2F4557")
       (moiety unused-marker "Jade" "#61AB89")
       (moiety unused-marker "Spearmint" "#148E67")
-      (moiety unused-marker "Emerald" "#20603F")
       (moiety unused-marker "Honeydew" "#D1E572" #f "" #t)
       (moiety unused-marker "Algae" "#97AF8B")
       (moiety unused-marker "Murk" "#4B4420")
