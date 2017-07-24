@@ -81,7 +81,7 @@
    (moiety "ChaosMagic" "Fuchsia" "#C74375" "Gloom" "#545365")
    (moiety "Rotifer" "Carbon" "#564D48" "Morning" "#E17A40")
    (moiety "TeenyTabris" "Wisteria" "#724D79")
-   (moiety "Armada" "Emerald" "#20603F" "Spruce" "#8DBCB4")
+   (moiety "Armada" "Ice" "#E6EBF7" "Blood" "#A71012" #t #f)
    ))
 
 (define (hue-from rgb)
@@ -161,6 +161,7 @@
   (let ([unused-marker "[i](unused)[/i]"])
     (rainbow-sort
      (list
+      (moiety unused-marker "Emerald" "#20603F")
       (moiety unused-marker "Coral" "#CC6F6F")
       (moiety unused-marker "Smoke" "#693834")
       (moiety unused-marker "Haze" "#704C49")
