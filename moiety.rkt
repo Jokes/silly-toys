@@ -82,6 +82,7 @@
    (moiety "Rotifer" "Carbon" "#564D48" "Morning" "#E17A40")
    (moiety "TeenyTabris" "Wisteria" "#724D79")
    (moiety "Armada" "Ice" "#E6EBF7" "Blood" "#A71012" #t #f)
+   (moiety "Tamien" "Leaf" "#366E17" "Loam" "#3D2C0C")
    ))
 
 (define (hue-from rgb)
