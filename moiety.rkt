@@ -85,6 +85,7 @@
    (moiety "Tamien" "Leaf" "#366E17" "Loam" "#3D2C0C")
    (moiety "Linky" "Powder" "#91BFFF")
    (moiety "loki-zen" "Sunlight" "#FCF782" "Blood" "#A71012" #t #f)
+   (moiety "Root" "Honeydew" "#D1E572" #f "" #t)
    ))
 
 (define (hue-from rgb)
@@ -201,7 +202,6 @@
       (moiety unused-marker "Denim" "#2F4557")
       (moiety unused-marker "Jade" "#61AB89")
       (moiety unused-marker "Spearmint" "#148E67")
-      (moiety unused-marker "Honeydew" "#D1E572" #f "" #t)
       (moiety unused-marker "Algae" "#97AF8B")
       (moiety unused-marker "Murk" "#4B4420")
       (moiety unused-marker "Amber" "#C18E1B")
