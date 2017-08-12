@@ -86,6 +86,7 @@
    (moiety "Linky" "Powder" "#91BFFF")
    (moiety "loki-zen" "Sunlight" "#FCF782" "Blood" "#A71012" #t #f)
    (moiety "Root" "Honeydew" "#D1E572" #f "" #t)
+   (moiety "Bobby" "Turquoise" "#AFEEEE" "Eggplant" "#3F2B66" #t #f)
    ))
 
 (define (hue-from rgb)
@@ -177,7 +178,6 @@
       (moiety unused-marker "Cream" "#fffdd0" #f "" #t)
       (moiety unused-marker "Seafoam" "#8EDAB2")
       (moiety unused-marker "Periwinkle" "#9F9FFF")
-      (moiety unused-marker "Eggplant" "#3F2B66")
       (moiety unused-marker "Nightshade" "#7930B5")
       (moiety unused-marker "Mallow" "#D191FF")
       (moiety unused-marker "Petal" "#C38EE6")
