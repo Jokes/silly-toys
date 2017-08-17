@@ -85,8 +85,10 @@
    (moiety "Tamien" "Leaf" "#366E17" "Loam" "#3D2C0C")
    (moiety "Linky" "Powder" "#91BFFF")
    (moiety "loki-zen" "Sunlight" "#FCF782" "Blood" "#A71012" #t #f)
-   (moiety "Root" "Honeydew" "#D1E572" #f "" #t)
+   (moiety "Root" "Honeydew" "#D1E572" "Watermelon" "#DB518D" #t #f)
    (moiety "Bobby" "Turquoise" "#AFEEEE" "Eggplant" "#3F2B66" #t #f)
+   (moiety "XiBeta" "Coral" "#FFE0E0" #f "" #t)
+   (moiety "Lielac" "Lilac" "#DCD0FF" "Lime" "#99C534" #t #f)
    ))
 
 (define (hue-from rgb)
@@ -167,7 +169,7 @@
     (rainbow-sort
      (list
       (moiety unused-marker "Emerald" "#20603F")
-      (moiety unused-marker "Coral" "#CC6F6F")
+      (moiety unused-marker "Blush" "#CC6F6F")
       (moiety unused-marker "Smoke" "#693834")
       (moiety unused-marker "Haze" "#704C49")
       (moiety unused-marker "Cinnamon" "#C15A39")
@@ -176,7 +178,7 @@
       (moiety unused-marker "Coal" "#372E29")
       (moiety unused-marker "Toffee" "#ECB939")
       (moiety unused-marker "Cream" "#fffdd0" #f "" #t)
-      (moiety unused-marker "Seafoam" "#8EDAB2")
+      (moiety unused-marker "Seafoam" "#8EDAB2" #f "" #t)
       (moiety unused-marker "Periwinkle" "#9F9FFF")
       (moiety unused-marker "Nightshade" "#7930B5")
       (moiety unused-marker "Mallow" "#D191FF")
@@ -191,7 +193,7 @@
       (moiety unused-marker "Mulberry" "#6E235D")
       (moiety unused-marker "Damask" "#9C4975")
       (moiety unused-marker "Pansy" "#78184A")
-      (moiety unused-marker "Platinum" "#C8BECE")
+      (moiety unused-marker "Platinum" "#C8BECE" #f "" #t)
       (moiety unused-marker "Flint" "#636268")
       (moiety unused-marker "Ashes" "#4B4946")
       (moiety unused-marker "Shadow" "#292B38")
