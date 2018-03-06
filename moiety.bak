@@ -89,7 +89,6 @@
    (moiety "Bobby" "Turquoise" "#AFEEEE" "Eggplant" "#3F2B66" #t #f)
    (moiety "XiBeta" "Coral" "#FFE0E0" #f "" #t)
    (moiety "Lielac" "Lilac" "#DCD0FF" "Lime" "#99C534" #t #f)
-   (moiety "alexander" "Life" "#6FB939" "Dawn" "#B7E330" #f #t)
    ))
 
 (define (hue-from rgb)
