@@ -90,6 +90,8 @@
    (moiety "XiBeta" "Coral" "#FFE0E0" #f "" #t)
    (moiety "Lielac" "Lilac" "#DCD0FF" "Lime" "#99C534" #t #f)
    (moiety "alexander" "Life" "#6FB939" "Dawn" "#B7E330" #f #t)
+   (moiety "Grace" "Malachite" "#057B5A" "Cherry" "#670104")
+   (moiety "Ajzira" "Celeste" "#DBDDD3" "Thunder" "#545F8C" #t)
    ))
 
 (define (hue-from rgb)
@@ -201,7 +203,6 @@
       (moiety unused-marker "Iris" "#525195")
       (moiety unused-marker "Lavender" "#C080FF")
       (moiety unused-marker "Steel" "#556979")
-      (moiety unused-marker "Thunder" "#444F69")
       (moiety unused-marker "Denim" "#2F4557")
       (moiety unused-marker "Jade" "#61AB89")
       (moiety unused-marker "Spearmint" "#148E67")
