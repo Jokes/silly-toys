@@ -92,6 +92,7 @@
    (moiety "alexander" "Life" "#6FB939" "Dawn" "#B7E330" #f #t)
    (moiety "Grace" "Malachite" "#057B5A" "Cherry" "#670104")
    (moiety "Ajzira" "Celeste" "#DBDDD3" "Thunder" "#545F8C" #t)
+   (moiety "rusalkii" "Pond" "#259A83" "Dusk" "#402989")
    ))
 
 (define (hue-from rgb)
