@@ -3,7 +3,7 @@
 (require "bytes.rkt")
 (provide Moiety Moiety->string moiety
          Moiety-name Moiety-primary Moiety-hex1 Moiety-secondary Moiety-hex2
-         moiety-rainbow all-colours unused-colours every-colour 
+         moiety-rainbow used-colours unused-colours every-colour 
          hue-from lum-from)
 
 (define (print-moiety name primary hex1 [secondary #f] [hex2 ""] [spoiler #f] [spoiler_second 0])
@@ -91,7 +91,7 @@
    (moiety "Lielac" "Lilac" "#DCD0FF" "Lime" "#99C534" #t #f)
    (moiety "alexander" "Life" "#6FB939" "Dawn" "#B7E330" #f #t)
    (moiety "Grace" "Malachite" "#057B5A" "Cherry" "#670104")
-   (moiety "Ajzira" "Celeste" "#DBDDD3" "Thunder" "#545F8C" #t)
+   (moiety "Ajzira" "Celeste" "#DBDDD3" "Thunder" "#545F8C" #t #f)
    (moiety "rusalkii" "Pond" "#259A83" "Dusk" "#402989")
    (moiety "strictlyquadrilateral" "Clematis" "#5f2f9d")
    ))
@@ -152,7 +152,7 @@
                   m)))
           rmlist))))
 
-(define all-colours
+(define used-colours
   (rainbow-sort 
    (combine-duplicates
     (apply append
@@ -219,7 +219,6 @@
       (moiety unused-marker "Caramel" "#C47149")
       (moiety unused-marker "Stone" "#827A64")
       (moiety unused-marker "Garnet" "#581014")
-      (moiety unused-marker "Watermelon" "#DB518D")
       (moiety unused-marker "Clay" "#603E3D")
       (moiety unused-marker "Sable" "#57372C")
       (moiety unused-marker "Hickory" "#72573A")
@@ -228,12 +227,12 @@
       (moiety unused-marker "Brick" "#9A534D")))))
 
 (define every-colour
-  (rainbow-sort (append all-colours unused-colours)))
+  (rainbow-sort (append used-colours unused-colours)))
 
 (define (replace-list-post)
   (displayln "List of colours currently in use:")
   (displayln "[spoiler-box=Colours in use]")
-  (print-moiety-list all-colours)
+  (print-moiety-list used-colours)
   (displayln "[/spoiler-box]")
   (displayln "List of unused colours that have been unofficially named - you are free to use these names for different colours, or these colours under different names:")
   (displayln "[spoiler-box=Unused colours]")
