@@ -93,6 +93,7 @@
    (moiety "Grace" "Malachite" "#057B5A" "Cherry" "#670104")
    (moiety "Ajzira" "Celeste" "#DBDDD3" "Thunder" "#545F8C" #t)
    (moiety "rusalkii" "Pond" "#259A83" "Dusk" "#402989")
+   (moiety "strictlyquadrilateral" "Clematis" "#5f2f9d")
    ))
 
 (define (hue-from rgb)
