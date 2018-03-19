@@ -94,6 +94,7 @@
    (moiety "Ajzira" "Celeste" "#DBDDD3" "Thunder" "#545F8C" #t #f)
    (moiety "rusalkii" "Pond" "#259A83" "Dusk" "#402989")
    (moiety "strictlyquadrilateral" "Clematis" "#5f2f9d")
+   (moiety "thefakestseebs" "Mist" "#D4A697")
    ))
 
 (define (hue-from rgb)
@@ -178,7 +179,6 @@
       (moiety unused-marker "Smoke" "#693834")
       (moiety unused-marker "Haze" "#704C49")
       (moiety unused-marker "Cinnamon" "#C15A39")
-      (moiety unused-marker "Mist" "#D4A697")
       (moiety unused-marker "Driftwood" "#766259")
       (moiety unused-marker "Coal" "#372E29")
       (moiety unused-marker "Toffee" "#ECB939")
