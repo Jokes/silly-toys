@@ -95,6 +95,7 @@
    (moiety "rusalkii" "Pond" "#259A83" "Dusk" "#402989")
    (moiety "strictlyquadrilateral" "Clematis" "#5f2f9d")
    (moiety "thefakestseebs" "Mist" "#D4A697")
+   (moiety "keysie" "Eldritch" "#252A24" "Mulberry" "#6E235D")
    ))
 
 (define (hue-from rgb)
@@ -195,7 +196,6 @@
       (moiety unused-marker "Blackberry" "#4C2A4F")
       (moiety unused-marker "Byzantium" "#702963")
       (moiety unused-marker "Thistle" "#8F7C8B")
-      (moiety unused-marker "Mulberry" "#6E235D")
       (moiety unused-marker "Damask" "#9C4975")
       (moiety unused-marker "Pansy" "#78184A")
       (moiety unused-marker "Platinum" "#C8BECE" #f "" #t)
