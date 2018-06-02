@@ -96,6 +96,9 @@
    (moiety "strictlyquadrilateral" "Clematis" "#5f2f9d")
    (moiety "thefakestseebs" "Mist" "#D4A697")
    (moiety "keysie" "Eldritch" "#252A24" "Mulberry" "#6E235D")
+   (moiety "Freya" "Mauve" "#E0B0FF" "Gloom" "#545365" #t #f)
+   (moiety "silver-and-ivory" "Sanguine" "#9A534D" "Celeste" "#DBDDD3" #f #t)
+   (moiety "liriaticAeon" "Lunatic" "#E1DAF2" "Illusion" "#BFC1C2" #t)
    ))
 
 (define (hue-from rgb)
@@ -189,7 +192,6 @@
       (moiety unused-marker "Nightshade" "#7930B5")
       (moiety unused-marker "Mallow" "#D191FF")
       (moiety unused-marker "Petal" "#C38EE6")
-      (moiety unused-marker "Mauve" "#E0B0FF" #f "" #t)
       (moiety unused-marker "Amethyst" "#993BD1")
       (moiety unused-marker "Fog" "#A794B2")
       (moiety unused-marker "Eminence" "#6C3082")
@@ -224,7 +226,6 @@
       (moiety unused-marker "Hickory" "#72573A")
       (moiety unused-marker "Soil" "#5A4534")
       (moiety unused-marker "Raspberry" "#8A024A")
-      (moiety unused-marker "Brick" "#9A534D")
       (moiety unused-marker "Life" "#6FB939")))))
 
 (define every-colour
