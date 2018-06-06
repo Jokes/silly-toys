@@ -100,6 +100,9 @@
    (moiety "silver-and-ivory" "Sanguine" "#9A534D" "Celeste" "#DBDDD3" #f #t)
    (moiety "liriaticAeon" "Lunatic" "#E1DAF2" "Illusion" "#BFC1C2" #t)
    (moiety "Nymtheriel" "Nightshade" "#7930B5" "Cinnamon" "#C15A39")
+   (moiety "Tetrikitty" "Iceberg" "#6699FF")
+   (moiety "apprenticebard" "Champagne" "#F7E7CE" #f "" #t)
+   (moiety "Calima" "Peridot" "#568203")
    ))
 
 (define (hue-from rgb)
