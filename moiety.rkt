@@ -90,7 +90,7 @@
    (moiety "XiBeta" "Coral" "#FFE0E0" #f "" #t)
    (moiety "Lielac" "Lilac" "#DCD0FF" "Lime" "#99C534" #t #f)
    (moiety "alexander" "Dawn" "#8b6376" "Speech" "#22201f")
-   (moiety "Grace" "Malachite" "#057B5A" "Cherry" "#670104")
+   (moiety "Grace" "Malachite" "#057B5A")
    (moiety "Ajzira" "Celeste" "#DBDDD3" "Thunder" "#545F8C" #t #f)
    (moiety "rusalkii" "Pond" "#259A83" "Dusk" "#402989")
    (moiety "strictlyquadrilateral" "Clematis" "#5f2f9d")
@@ -101,7 +101,7 @@
    (moiety "liriaticAeon" "Lunatic" "#E1DAF2" "Illusion" "#BFC1C2" #t)
    (moiety "Nymtheriel" "Nightshade" "#7930B5" "Cinnamon" "#C15A39")
    (moiety "Tetrikitty" "Iceberg" "#6699FF")
-   (moiety "apprenticebard" "Champagne" "#F7E7CE" #f "" #t)
+   (moiety "apprenticebard" "Parchment" "#efdfbb" #f "" #t)
    (moiety "Calima" "Peridot" "#568203")
    ))
 
@@ -228,6 +228,7 @@
       (moiety unused-marker "Hickory" "#72573A")
       (moiety unused-marker "Soil" "#5A4534")
       (moiety unused-marker "Raspberry" "#8A024A")
+      (moiety unused-marker "Cherry" "#670104")
       (moiety unused-marker "Life" "#6FB939")))))
 
 (define every-colour
