@@ -103,6 +103,9 @@
    (moiety "Tetrikitty" "Iceberg" "#6699FF")
    (moiety "apprenticebard" "Parchment" "#efdfbb" #f "" #t)
    (moiety "Calima" "Peridot" "#568203")
+   (moiety "Lethriloth" "Serpentine" "#005040")
+   (moiety "Laethri" "Feather" "#4c4cba" "Life" "#6FB939")
+   (moiety "MTC" "Vermilion" "#FF6400" "Silver" "#A0A0A0")
    ))
 
 (define (hue-from rgb)
@@ -228,8 +231,7 @@
       (moiety unused-marker "Hickory" "#72573A")
       (moiety unused-marker "Soil" "#5A4534")
       (moiety unused-marker "Raspberry" "#8A024A")
-      (moiety unused-marker "Cherry" "#670104")
-      (moiety unused-marker "Life" "#6FB939")))))
+      (moiety unused-marker "Cherry" "#670104")))))
 
 (define every-colour
   (rainbow-sort (append used-colours unused-colours)))
