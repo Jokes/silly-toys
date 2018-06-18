@@ -90,7 +90,7 @@
    (moiety "XiBeta" "Coral" "#FFE0E0" #f "" #t)
    (moiety "Lielac" "Lilac" "#DCD0FF" "Lime" "#99C534" #t #f)
    (moiety "alexander" "Dawn" "#8b6376" "Speech" "#22201f")
-   (moiety "Grace" "Malachite" "#057B5A")
+   (moiety "Grace" "Malachite" "#057B5A" "Aquamarine" "#2EE8C6")
    (moiety "Ajzira" "Celeste" "#DBDDD3" "Thunder" "#545F8C" #t #f)
    (moiety "rusalkii" "Pond" "#259A83" "Dusk" "#402989")
    (moiety "strictlyquadrilateral" "Clematis" "#5f2f9d")
