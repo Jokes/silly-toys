@@ -106,6 +106,7 @@
    (moiety "Lethriloth" "Serpentine" "#005040")
    (moiety "Laethri" "Feather" "#4c4cba" "Life" "#6FB939")
    (moiety "MTC" "Vermilion" "#FF6400" "Silver" "#A0A0A0")
+   (moiety "Sophus" "Celadon" "#2f847c" "Yendor" "#cd00cd")
    ))
 
 (define (hue-from rgb)

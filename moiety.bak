@@ -90,7 +90,7 @@
    (moiety "XiBeta" "Coral" "#FFE0E0" #f "" #t)
    (moiety "Lielac" "Lilac" "#DCD0FF" "Lime" "#99C534" #t #f)
    (moiety "alexander" "Dawn" "#8b6376" "Speech" "#22201f")
-   (moiety "Grace" "Malachite" "#057B5A")
+   (moiety "Grace" "Malachite" "#057B5A" "Aquamarine" "#2EE8C6")
    (moiety "Ajzira" "Celeste" "#DBDDD3" "Thunder" "#545F8C" #t #f)
    (moiety "rusalkii" "Pond" "#259A83" "Dusk" "#402989")
    (moiety "strictlyquadrilateral" "Clematis" "#5f2f9d")
@@ -104,7 +104,7 @@
    (moiety "apprenticebard" "Parchment" "#efdfbb" #f "" #t)
    (moiety "Calima" "Peridot" "#568203")
    (moiety "Lethriloth" "Serpentine" "#005040")
-   (moiety "Laethri" "Feather" "#4c4cba")
+   (moiety "Laethri" "Feather" "#4c4cba" "Life" "#6FB939")
    (moiety "MTC" "Vermilion" "#FF6400" "Silver" "#A0A0A0")
    ))
 
@@ -231,8 +231,7 @@
       (moiety unused-marker "Hickory" "#72573A")
       (moiety unused-marker "Soil" "#5A4534")
       (moiety unused-marker "Raspberry" "#8A024A")
-      (moiety unused-marker "Cherry" "#670104")
-      (moiety unused-marker "Life" "#6FB939")))))
+      (moiety unused-marker "Cherry" "#670104")))))
 
 (define every-colour
   (rainbow-sort (append used-colours unused-colours)))
