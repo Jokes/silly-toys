@@ -110,6 +110,7 @@
    (moiety "Arete" "Flame" "#F7A93B")
    (moiety "Hellevi" "Watermelon" "#DB518D")
    (moiety "Phi" "Strawberry" "#ea103f" "Cherry" "#670104")
+   (moiety "WolffyLuna" "Sienna" "#af5815" "Soil" "#5A4534")
    ))
 
 (define (hue-from rgb)

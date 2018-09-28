@@ -109,6 +109,7 @@
    (moiety "Sophus" "Celadon" "#2f847c" "Yendor" "#cd00cd")
    (moiety "Arete" "Flame" "#F7A93B")
    (moiety "Hellevi" "Watermelon" "#DB518D")
+   (moiety "Phi" "Strawberry" "#ea103f" "Cherry" "#670104")
    ))
 
 (define (hue-from rgb)
@@ -233,8 +234,7 @@
       (moiety unused-marker "Sable" "#57372C")
       (moiety unused-marker "Hickory" "#72573A")
       (moiety unused-marker "Soil" "#5A4534")
-      (moiety unused-marker "Raspberry" "#8A024A")
-      (moiety unused-marker "Cherry" "#670104")))))
+      (moiety unused-marker "Raspberry" "#8A024A")))))
 
 (define every-colour
   (rainbow-sort (append used-colours unused-colours)))
