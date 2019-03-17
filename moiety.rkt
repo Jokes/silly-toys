@@ -111,6 +111,7 @@
    (moiety "Hellevi" "Watermelon" "#DB518D")
    (moiety "Phi" "Strawberry" "#ea103f" "Cherry" "#670104")
    (moiety "WolffyLuna" "Sienna" "#af5815" "Soil" "#5A4534")
+   ;(moiety "ozy" "Imperial" "#921082")
    ))
 
 (define (hue-from rgb)
