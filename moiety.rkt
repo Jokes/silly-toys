@@ -111,6 +111,7 @@
    (moiety "Hellevi" "Watermelon" "#DB518D")
    (moiety "Phi" "Strawberry" "#ea103f" "Cherry" "#670104")
    (moiety "WolffyLuna" "Sienna" "#af5815" "Soil" "#5A4534")
+   (moiety "Blaze" "Shadow" "#292b38" "Crystal" "#7fd4ff")
    ;(moiety "ozy" "Imperial" "#921082")
    ))
 
@@ -214,7 +215,6 @@
       (moiety unused-marker "Platinum" "#C8BECE" #f "" #t)
       (moiety unused-marker "Flint" "#636268")
       (moiety unused-marker "Ashes" "#4B4946")
-      (moiety unused-marker "Shadow" "#292B38")
       (moiety unused-marker "Iris" "#525195")
       (moiety unused-marker "Lavender" "#C080FF")
       (moiety unused-marker "Steel" "#556979")
